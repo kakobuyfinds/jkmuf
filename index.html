@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#f9f3ec">
+<title>LoveGoBuy spreadsheet | Fiche d’achat, tailles et photos QC</title>
+<meta name="description" content="Comparez deux fiches avec ce guide LoveGoBuy spreadsheet. Repérez les rayons mode, vérifiez les tailles en cm, lisez les photos QC et estimez le coût livré.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="LoveGoBuy spreadsheet | Fiche d’achat, tailles et photos QC">
+<meta property="og:description" content="Un carnet d’achat en français pour vérifier une variante, comparer les mesures et préparer son budget de livraison.">
+<link rel="preconnect" href="https://www.shoepalace.com">
+<!--
+index.html
+Recherche éditoriale : la première page de Google n’a pas pu être vérifiée.
+Dix domaines distincts ont été consultés via la recherche web publique, sans classement Google revendiqué.
+https://rep.tools/guides/lovegobuy-spreadsheet — définition et liens d’origine
+https://lovegobuy.io/ — classement par rayon et état des fiches
+https://lovegobuy.cc/ — navigation par catégories et aide à l’achat
+https://sheetslovegobuy.com/browse — filtres, tailles et contrôle visuel
+https://lovegobuyguide.com/lovegobuy-spreadsheet/ — index et plateformes sources
+https://www.lovegobuy.org/ — présélection et comparaison
+https://lovego-buy.courses/guides/lovegobuy-spreadsheet — champs de suivi
+https://lovegobuy.net/ — recherche, photos QC et lecture des variantes
+https://lovego.org/articles/lovegobuy-spreadsheet-buyer-workbook-qc-returns-and-shipping-prep/ — préparation du colis et suivi des retours
+https://lovegobuy-sheet.store/ — référence article, couleur et disponibilité
+Requêtes secondaires retenues : guide d’achat LoveGoBuy, liens produits LoveGoBuy,
+photos QC LoveGoBuy, frais de livraison LoveGoBuy.
+-->
+<style>
+:root{color-scheme:light;--paper:#f9f3ec;--panel:#fffdf9;--ink:#282035;--muted:#5d5265;--line:#d8cbd5;--violet:#472456;--soft:#ede0f5;--rust:#873e2f}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 system-ui,sans-serif}
+header,main,footer{width:min(1120px,calc(100% - 32px));margin-inline:auto}
+header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 0;border-bottom:1px solid var(--line)}
+a{color:inherit;text-underline-offset:.2em}
+a:focus-visible,summary:focus-visible{outline:3px solid var(--rust);outline-offset:4px}
+.logo{font-size:1.16rem;font-weight:800;text-decoration:none}
+.kicker{color:var(--rust);font-size:.78rem;font-weight:800;letter-spacing:.11em;text-transform:uppercase}
+header .kicker{text-align:right}
+p{margin:0 0 .85rem}
+h1,h2,h3{line-height:1.16;margin:0 0 .75rem}
+h1,h2{font-family:Georgia,"Times New Roman",serif}
+h1{font-size:clamp(2.35rem,6vw,5.25rem);letter-spacing:-.045em;overflow-wrap:anywhere}
+h2{font-size:clamp(1.8rem,4.2vw,2.85rem);letter-spacing:-.025em}
+h3{font-size:1.2rem}
+nav{padding:15px 0 24px}
+nav ul{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;margin:6px 0 0;padding:0;list-style:none}
+nav a{display:flex;align-items:center;min-height:44px;height:100%;padding:6px 10px;border:1px solid var(--line);background:var(--panel);font-size:.88rem;font-weight:650;text-decoration:none}
+nav a:hover{background:var(--soft);text-decoration:underline}
+.hero{display:grid;grid-template-columns:1fr minmax(190px,33%);align-items:center;gap:clamp(18px,4vw,48px);padding:clamp(20px,4.5vw,54px);background:var(--soft);border-top:5px solid var(--violet)}
+.hero p{max-width:60ch}
+figure{margin:0}
+img{display:block;width:100%;height:auto;background:#f1ebef}
+.hero img{aspect-ratio:1;object-fit:contain}
+figcaption,.small{color:var(--muted);font-size:.875rem}
+figcaption{padding-top:8px}
+.button{display:inline-flex;align-items:center;min-height:44px;margin-top:8px;padding:9px 17px;background:var(--violet);color:#fff;text-decoration:none;font-weight:750}
+.button:hover{text-decoration:underline}
+section,.chapters{margin-top:clamp(38px,7vw,76px)}
+.lede{max-width:72ch}
+.table-wrap{margin-top:18px}
+table{border-collapse:collapse;width:100%;table-layout:fixed;background:var(--panel)}
+caption{text-align:left;color:var(--muted);font-size:.9rem;padding-bottom:8px}
+th,td{padding:12px 10px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);overflow-wrap:anywhere}
+thead th{background:var(--violet);color:#fff}
+thead th:first-child{width:28%}
+tbody th{background:#f1e6f5}
+.chapters{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.chapters article{padding-top:17px;border-top:3px solid var(--rust)}
+.gallery{display:grid;grid-template-columns:1.1fr .9fr .9fr .9fr;gap:12px;margin-top:16px}
+.gallery img{aspect-ratio:1;object-fit:contain}
+.gallery strong{display:block;color:var(--ink)}
+.faq{max-width:850px}
+details{border-bottom:1px solid var(--line)}
+summary{padding:14px 2px;font-weight:740;cursor:pointer}
+details p{margin:0;padding:0 2px 16px;color:var(--muted)}
+footer{margin-top:48px;padding:20px 0 28px;border-top:1px solid var(--line)}
+@media(max-width:720px){
+  nav ul{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .hero{grid-template-columns:1fr}
+  .hero figure{max-width:340px}
+  .chapters{grid-template-columns:1fr}
+  .gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:420px){
+  nav ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+  th,td{padding:8px 6px;font-size:.82rem}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "LoveGoBuy spreadsheet | Fiche d’achat, tailles et photos QC",
+  "description": "Comparez deux fiches avec ce guide LoveGoBuy spreadsheet. Repérez les rayons mode, vérifiez les tailles en cm, lisez les photos QC et estimez le coût livré.",
+  "inLanguage": "fr",
+  "mainEntity": {
+    "@type": "Article",
+    "headline": "Du lien produit au choix final",
+    "inLanguage": "fr",
+    "about": [
+      {"@type": "Thing", "name": "LoveGoBuy spreadsheet"},
+      {"@type": "Thing", "name": "Comparaison des fiches produit et des tailles"}
+    ]
+  }
+}
+</script>
+<link rel="canonical" href="https://kakobuyfinds.github.io/jkmuf/">
+</head>
+<body>
+<header>
+  <a class="logo" href="https://www.hipobuyfind.com">hipobuyfind.com</a>
+  <span class="kicker">Carnet d’achat indépendant</span>
+</header>
+<main>
+  <nav aria-label="Rayons du catalogue HipobuyFind">
+    <p class="kicker">Dix rayons à explorer</p>
+    <ul>
+      <li><a href="https://hipobuyfind.com/category-911-Shoes.html">Chaussures ↗</a></li>
+      <li><a href="https://hipobuyfind.com/category-912-Hoodies%2FSweaters.html">Sweats et pulls ↗</a></li>
+      <li><a href="https://hipobuyfind.com/category-913-T-Shirts.html">T-shirts ↗</a></li>
+      <li><a href="https://hipobuyfind.com/category-914-Jackets.html">Vestes ↗</a></li>
+      <li><a href="https://hipobuyfind.com/category-915-Pants%2FShorts.html">Pantalons et shorts ↗</a></li>
+      <li><a href="https://hipobuyfind.com/category-916-Headwear.html">Casquettes et bonnets ↗</a></li>
+      <li><a href="https://hipobuyfind.com/category-917-Sets.html">Ensembles ↗</a></li>
+      <li><a href="https://hipobuyfind.com/category-918-underwear%2Funderpants.html">Sous-vêtements ↗</a></li>
+      <li><a href="https://hipobuyfind.com/category-919-Jersey.html">Maillots ↗</a></li>
+      <li><a href="https://hipobuyfind.com/category-920-Accessories.html">Accessoires ↗</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero" style="margin-top:0" aria-labelledby="titre">
+    <div>
+      <p class="kicker">Mode · Tailles · Contrôle photo</p>
+      <h1 id="titre">LoveGoBuy spreadsheet</h1>
+      <p>Un LoveGoBuy spreadsheet est un tableau qui rassemble des références de produits. Une ligne peut réunir le lien du vendeur, la variante, les mesures et les photos de contrôle. Ce guide d’achat LoveGoBuy montre comment comparer deux fiches avant de choisir. Les rayons ci-dessus ouvrent le catalogue HipobuyFind.</p>
+      <a class="button" href="https://www.hipobuyfind.com">Parcourir HipobuyFind ↗</a>
+    </div>
+    <figure>
+      <img src="https://www.shoepalace.com/cdn/shop/files/3c98dc1b054aa1c274d8e09bdc1afe1f_1200x1200.jpg?v=1740678658" alt="Nike Air Force 1 ’07 Texture blanche vue de profil" width="1200" height="1200" loading="eager" fetchpriority="high" decoding="async">
+      <figcaption>Nike Air Force 1 ’07 Texture · repère visuel pour observer la semelle et le profil.</figcaption>
+    </figure>
+  </section>
+
+  <section aria-labelledby="comparaison">
+    <article>
+      <p class="kicker">01 · Fiche à recopier</p>
+      <h2 id="comparaison">Du lien produit au choix final</h2>
+      <p class="lede">Pour comparer des liens produits LoveGoBuy, ouvrez deux annonces du même rayon et notez les réponses dans votre propre tableau. Si une mesure manque, inscrivez la question à poser au lieu d’estimer la valeur à partir d’une photo.</p>
+      <div class="table-wrap">
+        <table>
+          <caption>Modèle pour comparer deux annonces avec les mêmes critères.</caption>
+          <thead><tr><th scope="col">Critère</th><th scope="col">Fiche A</th><th scope="col">Fiche B</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Lien et référence</th><td>Lien de l’annonce d’origine et référence du modèle</td><td>Mêmes champs et date de vérification du lien</td></tr>
+            <tr><th scope="row">Variante</th><td>Couleur, taille et matière sélectionnées</td><td>Stock de la variante et contenu du lot</td></tr>
+            <tr><th scope="row">Mesures en cm</th><td>Valeur indiquée et méthode de mesure</td><td>Même mesure prise sur une pièce qui vous va</td></tr>
+            <tr><th scope="row">Photos QC</th><td>Vue d’ensemble de la variante et détail à contrôler</td><td>Angle manquant ou photo sur règle à demander</td></tr>
+            <tr><th scope="row">Coût livré</th><td>Prix de l’article, devise et frais affichés</td><td>Montant estimé pour le pays de destination et frais à confirmer</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+  </section>
+
+  <div class="chapters">
+    <article aria-labelledby="mesures">
+      <p class="kicker">02 · Mesures et coupe</p>
+      <h3 id="mesures">Reproduire la mesure de la fiche</h3>
+      <p>Pour une pointure de baskets, mesurez les deux pieds debout et comparez le plus long au tableau du modèle. Vérifiez si la fiche donne la longueur du pied ou celle de la semelle intérieure. Sur une veste en denim, mesurez la carrure et la longueur de manche sur une veste de coupe comparable.</p>
+      <p>Pour un sweat à capuche, relevez la largeur de poitrine à plat. Pour un pantalon ou un short, comparez le tour de taille et la longueur d’entrejambe. Sur un ensemble, vérifiez les mesures du haut et du bas séparément. Pour un maillot, lisez les indications de coupe et vérifiez si le flocage fait partie de la variante.</p>
+    </article>
+    <article aria-labelledby="controle">
+      <p class="kicker">03 · Contrôle et expédition</p>
+      <h3 id="controle">Vérifier le détail qui pourrait changer votre choix</h3>
+      <p>Quand des photos QC LoveGoBuy sont disponibles, vérifiez qu’elles correspondent à la variante commandée. Sur un T-shirt, demandez un gros plan de l’imprimé si ses contours sont flous. Pour un sous-vêtement, vérifiez la largeur de l’élastique et le nombre de pièces par lot. Pour un accessoire, demandez une photo du fermoir en position ouverte.</p>
+      <p>Pour comparer les frais de livraison LoveGoBuy, renseignez le pays de destination. Les options proposées peuvent dépendre du poids du colis emballé et de ses dimensions. Depuis la France, la Belgique, la Suisse ou le Canada, vérifiez la devise de paiement, les frais indiqués pour l’adresse réelle et les conditions de retour avant de valider.</p>
+    </article>
+  </div>
+
+  <section aria-labelledby="visuels">
+    <p class="kicker">04 · Repères visuels</p>
+    <h2 id="visuels">Quatre détails à demander en photo</h2>
+    <p class="lede">Ces images de marque servent de références visuelles. Vérifiez la disponibilité et les caractéristiques sur la fiche de l’article que vous comparez.</p>
+    <div class="gallery">
+      <figure>
+        <img src="https://fr.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-veste-en-denim-monogram--FVJA29EFY610_PM1_Worn%20view.jpg" alt="Veste en denim bleu à motif Monogram Louis Vuitton portée" width="480" height="600" loading="lazy" decoding="async">
+        <figcaption><strong>Louis Vuitton</strong>Une vue portée pour situer la longueur de veste.</figcaption>
+      </figure>
+      <figure>
+        <img src="https://media.gucci.com/style/DarkGray_Center_0_0_490x490/1738780212/838034_4HBGG_9771_009_100_0000_Light-gg-canvas-baseball-cap-with-print.jpg" alt="Casquette Gucci beige en toile GG à visière incurvée" width="490" height="490" loading="lazy" decoding="async">
+        <figcaption><strong>Gucci</strong>Une vue arrière pour contrôler la patte de réglage du tour de tête.</figcaption>
+      </figure>
+      <figure>
+        <img src="https://assets.hermes.com/is/image/hermesproduct/064642CD18_front_wm_102?%24product_default_bg%24=" alt="Bracelet Hermès Kelly Double Tour en cuir étoupe avec fermoir métallique" width="480" height="480" loading="lazy" decoding="async">
+        <figcaption><strong>Hermès</strong>Un gros plan du fermoir et une mesure du tour de poignet.</figcaption>
+      </figure>
+      <figure>
+        <img src="https://assets.christiandior.com/is/image/diorprod/E1654TRIRSD301_SBG_E03-2?%24r4x5_raw%24=&amp;bfc=on&amp;crop=0%2C0%2C4000%2C5000&amp;hei=600&amp;qlt=75&amp;wid=480" alt="Boucles d’oreilles Dior Tribales à perles blanches et détail CD doré" width="480" height="600" loading="lazy" decoding="async">
+        <figcaption><strong>Dior</strong>Une vue de profil pour comparer le diamètre et le montage des perles.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="faq" aria-labelledby="questions" itemscope itemtype="https://schema.org/FAQPage">
+    <meta itemprop="inLanguage" content="fr">
+    <h2 id="questions">Questions fréquentes</h2>
+    <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <summary itemprop="name">À quoi sert un LoveGoBuy spreadsheet ?</summary>
+      <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <p itemprop="text">Il sert à conserver les références de plusieurs annonces et à comparer les variantes, les tailles et les photos. Le stock se vérifie sur l’annonce en cours.</p>
+      </div>
+    </details>
+    <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <summary itemprop="name">Où mènent les liens de cette page ?</summary>
+      <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <p itemprop="text">Les dix liens de catégorie mènent aux rayons HipobuyFind. Les autres liens ouvrent son accueil. Ce carnet est indépendant de LoveGoBuy et des marques illustrées.</p>
+      </div>
+    </details>
+    <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <summary itemprop="name">Une photo QC suffit-elle pour authentifier un article ?</summary>
+      <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <p itemprop="text">Non. Une photo QC montre les détails visibles sous un angle donné. Elle peut aider à repérer un défaut ou une mauvaise variante, mais elle ne certifie pas l’authenticité.</p>
+      </div>
+    </details>
+    <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <summary itemprop="name">Comment estimer le prix total avant de commander ?</summary>
+      <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <p itemprop="text">Additionnez le prix de la variante et les frais affichés pour votre adresse. Vérifiez la devise et gardez les montants encore inconnus à part, notamment si le poids emballé reste à confirmer.</p>
+      </div>
+    </details>
+  </section>
+</main>
+<footer class="small">Guide francophone indépendant. Les visuels illustrent des points de comparaison. <a href="https://www.hipobuyfind.com">Accueil HipobuyFind ↗</a></footer>
+</body>
+</html>
